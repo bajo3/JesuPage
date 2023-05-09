@@ -16,26 +16,33 @@
 
 <body>
     <header>
-        <h1>Jesus DIAZ Automotores</h1>
+        <div class="header-container">
+          <h1>Jesus DIAZ Automotores</h1>
+          <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+          </button>
+        </div>
         <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Autos nuevos</a></li>
-                <li><a href="#">Autos usados</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Novedades</a></li>
+            <li><a href="#">Reseñas</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
     <main>
         <section class="banner">
             <h2>Los mejores autos nuevos y usados</h2>
             <p>Encuentra el auto que estás buscando en nuestra agencia. Tenemos una gran variedad de modelos y marcas
                 para que puedas elegir el que mejor se adapte a tus necesidades.</p>
-            <button>Ver Autos</button>
+            <button><a href="" target="_blank">Ver Catalogo </a></button>
         </section>
         <section class="destacados">
             <h2>Autos destacados</h2>
-            <div class="grid-container">
+            <div class="owl-carousel owl-carousel-3">
                 <div class="grid-item">
                     <img src="img/Autos/1.jpg" alt="Auto 1">
                     <h3>Modelo A</h3>
@@ -61,7 +68,7 @@
         </section>
         <section class="review">
             <h1>Reseñas</h1>
-            <div class="owl-carousel">
+            <div class="owl-carousel owl-carousel-4">
                 <div class="review-card">
                     <div class="review-header">
                         <img src="img/banner/unnamed.png" alt="Foto de perfil">
@@ -146,18 +153,41 @@
 
         </section>
 
-        <section class="contacto">
-            <h2>Contáctanos</h2>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
+        <section class="contact-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">      
+                  <h2>Visítanos</h2>
+                  <div class="map-wrapper">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1586.7410532874276!2d-59.12187674401839!3d-37.30740632406014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9591201e72abe775%3A0x7e82935b1fed2573!2sPiedrabuena%201578%2C%20B7001HDF%20Tandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1683635195257!5m2!1ses-419!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="map-overlay">
+                      <div class="overlay-text">
+                        <h3>Ubicación</h3>
+                        <p>Piedrabuena 1578 Tandil.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="directions">
+                    <h3>Cómo llegar</h3>
+                    <p>Texto de instrucciones para llegar a la ubicación.</p>
+                    <a target="_blank" href="https://goo.gl/maps/hpGVNWxYqfiYtCNW8">Obtener direcciones</a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h2>Contacto</h2>
+                  <div class="contact-info">
+                    <div class="info-item">                        
+                        <a target="_blank" class="btn-call" href="tel:+542494587046"><i class="fa fa-phone"></i> +542494587046</a>                    
+                        <a target="_blank" class="btn-wp" href="wa.link/jptcl0"><i class="fa-brands fa-whatsapp"></i> ir a Whatsap</a>                   
+                    </div>
+                  </div>    
+                </div>
+              </div>
+            </div>
+          </section>
+          
     </main>
 
 
@@ -165,6 +195,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="ownCarousel.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

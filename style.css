@@ -3,47 +3,102 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    color: #333;
+    color: #030303;
     margin: 0;
 }
 
 a {
-    color: #9801b6;
+    color: #6f0185;
     text-decoration: none;
 }
 
 /* Estilos de la cabecera */
-
 header {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header h1 {
-    margin: 0;
-    text-decoration: underline violet;
+  margin: 0;
+  font-size: 20px;
+  text-decoration: underline #d600fc;
+}
+
+nav {
+  display: none;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-top: 30px;
 }
 
 nav li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 nav a {
-    font-size: 18px;
+  color: #d600fc;
+  font-size: 15px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
+.show {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  header{
+    display: flex;
+  }
+  nav {
+    display: block;
+  }
+
+  nav ul{
+    position: absolute;
+    right: 0;
+   margin: 10px  15px 0px 0px  ;
+  }
+  .menu-toggle {
+    display: none;
+  }
+
+  header h1{
+    font-size: 35px;
+  }
+
+  header a{
+    font-size: 20px;
+  }
+
 }
 
 /* Estilos del banner */
@@ -64,6 +119,7 @@ nav a {
 .banner h2 {
     font-size: 40px;
     margin-bottom: 20px;
+    color: white;
 }
 
 .banner p {
@@ -88,10 +144,15 @@ nav a {
     background-color: #005ea2;
 }
 
+.banner button a{
+    color: white;
+}
+
 /* Estilos de la sección de autos destacados */
 
 .destacados {
     padding: 50px 20px;
+    margin: 5%;
 }
 
 .destacados h2 {
@@ -154,6 +215,7 @@ nav a {
 .review{
     display: flex;
     flex-direction: column;
+    margin: 5%;
 
 }
 .review h1{
@@ -201,3 +263,210 @@ nav a {
   
   
   /*Fin Clientes*/
+
+  /*Contancto*/
+  /* Estilos para el mapa */
+/* Estilos para el mapa */
+.map-wrapper {
+    position: relative;
+    height: 300px;
+    margin-top: 50px;
+    border: 2px solid #333;
+    }
+    
+    .container{
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding: 50px;
+    text-align: center;
+    }
+    
+    h2 {
+    color: #333;
+    }
+    
+    .map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Agrega aquí los estilos para el mapa interactivo */
+    }
+    
+    .map iframe{
+    width: 100%;
+    height: 100%;
+    }
+    
+    .map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .overlay-text {
+    color: #fff;
+    top: 0;
+    padding: 20px;
+    }
+    
+    .overlay-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+    
+    .overlay-text p {
+    font-size: 16px;
+    }
+    
+    /* Estilos para las direcciones */
+    .directions {
+    margin-top: 50px;
+    }
+    
+    .directions h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+    
+    .directions p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    }
+    
+    .directions a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    }
+    
+    .directions a:hover {
+    background-color: #555;
+    }
+    
+    /* Estilos para la información de contacto */
+    .contact-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row     ;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+    }
+    
+    .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    }
+    
+    .info-item .icon {
+    font-size: 24px;
+    margin-right: 20px;
+    color: #333;
+    }
+    
+    .info-item h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+    }
+    
+    .btn-call {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #337ab7;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        border: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        margin-right: 15px;
+      }
+      
+      .btn-call:hover {
+        background-color: #2e6da4;
+        color: #fff;
+      }
+      
+.btn-wp {
+    display: inline-block;
+    background-color: #4DC247;
+    color: #FFF;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-wp:hover {
+    background-color: #3B954B;
+  }
+  
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+ol-md-6 {
+      width: 100%;
+      margin-bottom: 30px;
+    
+    }
+    .map-wrapper {
+      height: 200px;
+    }
+    .map-overlay {
+      display: none;
+    }
+    .directions {
+      margin-top: 30px;
+    }
+
+ 
+    .info-item{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .info-item a{
+        align-items: center;
+        margin: auto;
+        margin-top: 15px;
+    }
+  }
+  
+  /* Estilos para tabletas */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .map-wrapper {
+      height: 300px;
+    }
+  }
+  
+  /* Estilos para pantallas grandes */
+  @media only screen and (min-width: 992px) {
+    .map-wrapper {
+      height: 400px;
+    }
+  }
+  
+/*fin*/  

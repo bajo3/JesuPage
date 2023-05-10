@@ -5,6 +5,8 @@ body {
     font-size: 16px;
     color: #030303;
     margin: 0;
+    background: url('img/Fondo.png');
+    z-index: -1;
 }
 
 a {
@@ -41,12 +43,15 @@ nav ul {
 }
 
 nav li {
-  margin-left: 20px;
+  margin-left: 5px;
+  padding: 8px;
+  border-radius: 30px;
 }
 
 nav a {
   color: #d600fc;
   font-size: 15px;
+  font-weight: 600;
 }
 
 .header-container {
@@ -85,7 +90,7 @@ nav a {
   nav ul{
     position: absolute;
     right: 0;
-   margin: 10px  15px 0px 0px  ;
+   margin: 5px  15px 0px 0px  ;
   }
   .menu-toggle {
     display: none;
@@ -104,53 +109,117 @@ nav a {
 /* Estilos del banner */
 
 .banner {
-    background-image: url('img/banner/1.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
+  position: relative;
+  height: 100vh;
+}
+
+.video-container {
+  position: relative;
+  height: 100%;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(4px);
+  text-align: center;
+  color: #fff;
+
+  
 }
 
 .banner h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: white;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: white;
 }
 
 .banner p {
-    font-size: 24px;
-    max-width: 700px;
-    margin-bottom: 30px;
-    line-height: 1.5;
+  font-size: 24px;
+  max-width: 700px;
+  margin-bottom: 30px;
+  line-height: 1.5;
 }
 
 .banner button {
-    font-size: 20px;
-    background-color: #0077be;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+  font-size: 20px;
+  background-color: #0077be;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .banner button:hover {
-    background-color: #005ea2;
+  background-color: #005ea2;
 }
 
 .banner button a{
-    color: white;
+  color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .banner{
+    height: 70vh;
+  }
+
+  .content-container{
+    width: 80%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .banner h2 {
+    font-size: 30px;
+  }
+  
+  .banner p {
+    font-size: 20px;
+    max-width: 500px;
+  }
+  
+  .banner button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner h2 {
+    font-size: 24px;
+  }
+  
+  .banner p {
+    font-size: 16px;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .banner button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
 
 /* Estilos de la sección de autos destacados */
 
 .destacados {
+  background: white;
     padding: 50px 20px;
     margin: 5%;
 }
@@ -213,6 +282,7 @@ nav a {
 
 /*Seccion clientes*/
 .review{
+  background: white;
     display: flex;
     flex-direction: column;
     margin: 5%;
@@ -280,6 +350,8 @@ nav a {
     background-color: #f5f5f5;
     padding: 50px;
     text-align: center;
+    width: 80%;
+    margin: auto;
     }
     
     h2 {

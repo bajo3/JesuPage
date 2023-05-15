@@ -244,6 +244,7 @@ nav a {
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
+    height: 350px;
     transition: box-shadow 0.2s ease-in-out;
 }
 
@@ -269,15 +270,20 @@ nav a {
 }
 
 .grid-item a {
-    font-size: 16px;
-    background-color: #0077be;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+  font-size: 16px;
+  background-color: #0077be;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 15px;
+  transition: background-color 0.2s ease-in-out;
 }
+
 
 .grid-item a:hover {
     background-color: #005ea2;
@@ -413,16 +419,6 @@ nav a {
     /* Estilos para las direcciones */
     .directions {
     margin-top: 50px;
-    }
-    
-    .directions h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    }
-    
-    .directions p {
-    font-size: 16px;
-    margin-bottom: 20px;
     }
     
     .directions a {
